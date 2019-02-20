@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace I18NPortable
+namespace I18NPortablewithReverseLookup
 {
     public class I18NException : Exception
     {

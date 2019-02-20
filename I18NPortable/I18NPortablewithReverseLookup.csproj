@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
-    <Version>0.6.0</Version>
-    <Authors>Diego Ponce de Leon</Authors>
-    <Company></Company>
+    <Version>1.0.2</Version>
+    <Authors>Daniel Pollack and Diego Ponce de Leon</Authors>
+    <Company>Daniel Pollack and Diego Ponce de Leon</Company>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/xleon/I18N-Portable/blob/master/LICENSE</PackageLicenseUrl>
     <Description>Simple cross platform internationalization/translations for Xamarin and Windows apps</Description>
-    <Copyright>Copyright 2017</Copyright>
+    <Copyright>Copyright 2019</Copyright>
     <PackageTags>I18N, Internationalization, Translations, Xamarin, Xamarin.Forms, Mvvm, Xamarin.iOS, Xamarin.Android, iOS, Android, UWP, Windows Universal</PackageTags>
     <PackageReleaseNotes>Relase notes at https://github.com/xleon/I18N-Portable/releases</PackageReleaseNotes>
     <PackageIconUrl>https://dl.dropboxusercontent.com/u/10633236/logo.png</PackageIconUrl>
@@ -16,6 +16,10 @@
     <RepositoryUrl>https://github.com/xleon/I18N-Portable</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en</NeutralLanguage>
+    <PackageId>I18NPortablewithReverseLookup</PackageId>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyName>I18NPortablewithReverseLookup</AssemblyName>
+    <RootNamespace>I18NPortablewithReverseLookup</RootNamespace>
   </PropertyGroup>
 
 </Project>

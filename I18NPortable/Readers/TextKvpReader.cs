@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace I18NPortable.Readers
+namespace I18NPortablewithReverseLookup.Readers
 {
     public class TextKvpReader : ILocaleReader
     {

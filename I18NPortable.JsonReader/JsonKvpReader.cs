@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using I18NPortablewithReverseLookup;
 using Newtonsoft.Json;
 
-namespace I18NPortable.JsonReader
+namespace I18NPortableI18NPortablewithReverseLookup.JsonReader
 {
     public class JsonKvpReader : ILocaleReader
     {

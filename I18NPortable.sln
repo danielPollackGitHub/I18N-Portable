@@ -26,11 +26,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Classic.Droid", "Sam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Classic.iOS", "Sample.Classic.iOS\Sample.Classic.iOS.csproj", "{EC5EE73E-3503-4A05-99AD-E2E787E2C8A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I18NPortable", "I18NPortable\I18NPortable.csproj", "{4DC53C6B-9F4B-4168-80C9-5D6C8849892E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I18NPortablewithReverseLookup", "I18NPortable\I18NPortablewithReverseLookup.csproj", "{4DC53C6B-9F4B-4168-80C9-5D6C8849892E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestHostAssembly", "TestHostAssembly\TestHostAssembly.csproj", "{0133FCC2-A9EC-4DEC-B43E-F0B0F136BFFA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I18NPortable.JsonReader", "I18NPortable.JsonReader\I18NPortable.JsonReader.csproj", "{FE719A18-689B-4239-9BD2-58C45719B6CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I18NPortablewithReverseLookup.JsonReader", "I18NPortable.JsonReader\I18NPortablewithReverseLookup.JsonReader.csproj", "{FE719A18-689B-4239-9BD2-58C45719B6CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetTest", "NugetTest\NugetTest.csproj", "{2E854785-0E85-495D-93BC-102B4130E234}"
 EndProject

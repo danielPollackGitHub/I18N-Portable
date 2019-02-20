@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace I18NPortable.Providers
+namespace I18NPortablewithReverseLookup.Providers
 {
     internal class EmbeddedResourceProvider : ILocaleProvider
     {

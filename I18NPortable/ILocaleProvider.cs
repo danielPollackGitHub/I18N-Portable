@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace I18NPortable
+namespace I18NPortablewithReverseLookup
 {
     public interface ILocaleProvider : IDisposable
     {

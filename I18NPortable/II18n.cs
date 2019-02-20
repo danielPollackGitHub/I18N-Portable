@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace I18NPortable
+namespace I18NPortablewithReverseLookup
 {
     public interface II18N : INotifyPropertyChanged, IDisposable
     {
@@ -22,6 +22,7 @@ namespace I18NPortable
 
         string GetDefaultLocale();
 
+        string ReverseTranslate(string value);
         string Translate(string key, params object[] args);
         string TranslateOrNull(string key, params object[] args);
 

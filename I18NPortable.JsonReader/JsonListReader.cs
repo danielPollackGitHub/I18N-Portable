@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace I18NPortable.JsonReader
+namespace I18NPortablewithReverseLookup.JsonReader
 {
     public class JsonKvp
     {

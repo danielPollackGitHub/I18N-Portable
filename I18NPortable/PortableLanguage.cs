@@ -1,4 +1,4 @@
-﻿namespace I18NPortable
+﻿namespace I18NPortablewithReverseLookup
 {
     public class PortableLanguage
     {

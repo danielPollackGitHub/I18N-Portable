@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace I18NPortable
+namespace I18NPortablewithReverseLookup
 {
     public static class Extensions
     {
@@ -10,6 +10,11 @@ namespace I18NPortable
         /// </summary>
         public static string Translate(this string key, params object[] args)
             => I18N.Current.Translate(key, args);
+
+
+        public static string ReverseTranslate(this string key)
+           => I18N.Current.ReverseTranslate(key);
+
 
         /// <summary>
         /// Get a translation from a key, formatting the string with the given params, if any. 
@@ -48,6 +53,14 @@ namespace I18NPortable
             var fieldName = fieldInfo.FieldType.Name;
 
             return $"{fieldName}.{value}".Translate();
+        }
+
+        public static string ReverseTranslate(this Enum value)
+        {
+            var fieldInfo = value.GetType().GetRuntimeField(value.ToString());
+            var fieldName = fieldInfo.FieldType.Name;
+
+            return $"{fieldName}.{value}".ReverseTranslate();
         }
     }
 }

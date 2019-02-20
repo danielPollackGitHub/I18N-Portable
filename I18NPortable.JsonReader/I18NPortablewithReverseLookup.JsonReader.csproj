@@ -4,10 +4,10 @@
     <TargetFramework>netstandard1.1</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>1.0.0</Version>
-    <Authors>Diego Ponce de Leon</Authors>
-    <Company>Diego Ponce de Leon</Company>
+    <Authors>Daniel Pollack and Diego Ponce de Leon</Authors>
+    <Company>Daniel PollackDiego Ponce de Leon</Company>
     <Description>I18NPortable plugin to support json file formats</Description>
-    <Copyright>Copyright 2017</Copyright>
+    <Copyright>Copyright 2019</Copyright>
     <PackageLicenseUrl>https://github.com/xleon/I18N-Portable/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/xleon/I18N-Portable</PackageProjectUrl>
     <PackageIconUrl>https://dl.dropboxusercontent.com/u/10633236/logo.png</PackageIconUrl>
@@ -15,14 +15,16 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>I18N, Internationalization, Translations, Xamarin, Xamarin.Forms, Mvvm, Xamarin.iOS, Xamarin.Android, iOS, Android, UWP, Windows Universal</PackageTags>
     <PackageReleaseNotes>Relase notes at https://github.com/xleon/I18N-Portable/releases</PackageReleaseNotes>
+    <PackageId>I18NPortablewithReverseLookup.JsonReader</PackageId>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\I18NPortable\I18NPortable.csproj" />
+    <ProjectReference Include="..\I18NPortable\I18NPortablewithReverseLookup.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,14 +4,14 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using I18NPortable.Providers;
-using I18NPortable.Readers;
+using I18NPortablewithReverseLookup.Providers;
+using I18NPortablewithReverseLookup.Readers;
 
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable MemberCanBeMadeStatic.Global
 // ReSharper disable UnusedMethodReturnValue.Global
 
-namespace I18NPortable
+namespace I18NPortablewithReverseLookup
 {
     public class I18N : II18N
     {
@@ -44,7 +44,7 @@ namespace I18NPortable
                 }
 
                 LoadLocale(value.Locale);
-
+                LoadEnglishLocale();
                 NotifyPropertyChanged(nameof(Locale));
                 NotifyPropertyChanged(nameof(Language));
             }
@@ -67,7 +67,7 @@ namespace I18NPortable
                 }
 
                 LoadLocale(value);
-
+                LoadEnglishLocale();
                 NotifyPropertyChanged(nameof(Locale));
                 NotifyPropertyChanged(nameof(Language));
             }
@@ -84,6 +84,7 @@ namespace I18NPortable
         .ToList();
 
         private Dictionary<string, string> _translations = new Dictionary<string, string>();
+        private Dictionary<string, string> _englishTranslations = new Dictionary<string, string>();
         private readonly IList<ILocaleProvider> _providers = new List<ILocaleProvider>();
         private readonly IList<Tuple<ILocaleReader, string>> _readers = new List<Tuple<ILocaleReader, string>>();
         private IList<string> _locales = new List<string>();
@@ -226,7 +227,7 @@ namespace I18NPortable
             }
 
             LoadLocale(localeToLoad);
-
+            LoadEnglishLocale();
             NotifyPropertyChanged(nameof(Locale));
             NotifyPropertyChanged(nameof(Language));
 
@@ -268,10 +269,44 @@ namespace I18NPortable
             NotifyPropertyChanged("Item[]");
         }
 
+        private void LoadEnglishLocale()
+        {
+            var stream = _providers.First().GetLocaleStream("en-US");
+            var extension = _localeFileExtensionMap["en-US"];
+            var reader = _readers.First(x => x.Item2.Equals(extension)).Item1;
+            try
+            {
+                _englishTranslations = reader.Read(stream) ?? new Dictionary<string, string>();
+            }
+            catch (Exception e)
+            {
+                var message = $"{ErrorMessages.ReaderException}.\nReader: {reader.GetType().Name}.\nLocale: {"en-US"}{extension}";
+                throw new I18NException(message, e);
+            }
 
-        #endregion
+        }
 
-        #region Translations
+
+            #endregion
+
+            #region Translations
+
+            public string ReverseTranslate(string value)
+        {
+            if (_englishTranslations.ContainsValue(value))
+            {
+                var key = _englishTranslations.Where(t => t.Value == value).SingleOrDefault().Key;
+                return key;
+            }
+            if (_throwWhenKeyNotFound)
+                throw new KeyNotFoundException(
+                    $"[{nameof(I18N)}] value '{value}' not found in the current language 'en-US'");
+
+            return $"{_notFoundSymbol}{value}{_notFoundSymbol}";
+        }
+
+
+
 
         /// <summary>
         /// Get a translation from a key, formatting the string with the given params, if any
