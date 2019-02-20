@@ -1,5 +1,5 @@
 
-# I18N-Portable
+# I18N-Portable for xamarin forms.
 Simple and cross platform internationalization/translations for Xamarin and .NET
 This is a fork from the original project that contains an addidional ReverseTranslate method. In this method, you supply a text string value in English and you get back the keyword for which you can plug into the translator to then get the corresponding translated text in the currently set language.
 
