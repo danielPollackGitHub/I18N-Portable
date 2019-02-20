@@ -1,5 +1,5 @@
 
-# I18N-Portable for xamarin forms.
+# I18NPortablewithReverseLookup for xamarin forms.
 Simple and cross platform internationalization/translations for Xamarin and .NET
 This is a fork from the original project that contains an addidional ReverseTranslate method. In this method, you supply a text string value in English and you get back the keyword for which you can plug into the translator to then get the corresponding translated text in the currently set language.
 
@@ -9,7 +9,7 @@ This is a fork from the original project that contains an addidional ReverseTran
 [![Codecov](https://img.shields.io/codecov/c/github/xleon/I18N-Portable.svg?style=for-the-badge)](https://codecov.io/gh/xleon/I18N-Portable)
 
 - Cross platform
-- Simple to use: `"key".Translate()`.
+- Simple to use: `"key".Translate()`. or `("Text".ReverseTranslate()).Translate()`.
 - Simple and fluent initialization setup.
 - Readable locale files (.txt with key/value pairs).
 - Support for custom file formats (json, xml, etc)
@@ -25,7 +25,7 @@ This is a fork from the original project that contains an addidional ReverseTran
 Install it on your PCL and platform projects.
 From nuget package manager console: 
 
-`PM> Install-Package I18NPortable`
+`PM> Install-Package I18NPortablewithReverseLookup`
 
 ### Setup locales
 
@@ -89,6 +89,13 @@ string dog = animals[0].Item2; // Perro
 
 Dictionary<Animals, string> animals = I18N.Current.TranslateEnumToDictionary<Animals>();
 string dog = animals[Animals.Dog]; // Perro
+
+//Reverse lookup to get the key for a string (in English). This Key can then be used to get the translation in any specified language.
+  public II18N TransStrings => I18N.Current;
+  var mesageText = string.IsNullOrEmpty(loginResponse.ErrorMessage) ? loginResponse.Message : loginResponse.ErrorMessage;
+                        lookupKey = string.IsNullOrEmpty (mesageText)? "ServerProblem":mesageText.ReverseTranslate();
+                        
+   Mvx.IoCProvider.Resolve<IUserDialogs>().Alert(TransStrings[lookupKey]);
 
 // List of supported languages (present in the "Locales" folder) in case you need to show a picker list
 List<PortableLanguage> languages = I18N.Current.Languages; // Each `PortableLanguage` has 2 strings: Locale and DisplayName
