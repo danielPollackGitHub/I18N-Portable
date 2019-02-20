@@ -150,9 +150,9 @@ The library ships with a single format reader/parser that is [TextKvpReader](htt
 
 | Reader        | Format        | Source  |
 | ------------- |:-------------:| :-----:|
-| [TextKvpReader](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable/Readers/TextKvpReader.cs)    | [See sample](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable.UnitTests/Locales/es.txt) | I18NPortable |
-| [JsonKvpReader](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable.JsonReader/JsonKvpReader.cs)    | [See sample](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable.UnitTests/JsonKvpLocales/es.json) | I18NPortable.JsonReader [![I18NPortable.JsonReader](https://img.shields.io/nuget/v/I18NPortable.JsonReader.svg?maxAge=50000)](https://www.nuget.org/packages/I18NPortable.JsonReader/) |
-| [JsonListReader](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable.JsonReader/JsonListReader.cs)   | [See sample](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable.UnitTests/JsonListLocales/es.json) | I18NPortable.JsonReader [![I18NPortable.JsonReader](https://img.shields.io/nuget/v/I18NPortable.JsonReader.svg?maxAge=50000)](https://www.nuget.org/packages/I18NPortable.JsonReader/) |
+| [TextKvpReader](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable/Readers/TextKvpReader.cs)    | [See sample](https://github.com/xleon/I18N-Portable/blob/master/I18NPortablewithReverseLookup.UnitTests/Locales/es.txt) | I18NPortable |
+| [JsonKvpReader](https://github.com/xleon/I18N-Portable/blob/master/I18NPortablewithReverseLookup.JsonReader/JsonKvpReader.cs)    | [See sample](https://github.com/xleon/I18N-Portable/blob/master/I18NPortablewithReverseLookup.UnitTests/JsonKvpLocales/es.json) | I18NPortable.JsonReader [![I18NPortable.JsonReader](https://img.shields.io/nuget/v/I18NPortablewithReverseLookup.JsonReader.svg?maxAge=50000)](https://www.nuget.org/packages/I18NPortablewithReverseLookup.JsonReader/) |
+| [JsonListReader](https://github.com/xleon/I18N-Portable/blob/master/I18NPortablewithReverseLookup.JsonReader/JsonListReader.cs)   | [See sample](https://github.com/xleon/I18N-Portable/blob/master/I18NPortable.UnitTests/JsonListLocales/es.json) | I18NPortablewithReverseLookup.JsonReader [![I18NPortable.JsonReader](https://img.shields.io/nuget/v/I18NPortablewithReverseLookup.JsonReader.svg?maxAge=50000)](https://www.nuget.org/packages/I18NPortablewithReverseLookup.JsonReader/) |
 
 To use any non-default format, it needs to be added on initialization:
 
