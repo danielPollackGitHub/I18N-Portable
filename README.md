@@ -3,10 +3,10 @@
 Simple and cross platform internationalization/translations for Xamarin and .NET
 This is a fork from the original project that contains an addidional ReverseTranslate method. In this method, you supply a text string value in English and you get back the keyword for which you can plug into the translator to then get the corresponding translated text in the currently set language.
 
-[![NuGet](https://img.shields.io/nuget/v/i18nportable.svg?style=for-the-badge)](https://www.nuget.org/packages/I18NPortablewithReverseLookup/) 
+[![NuGet](https://img.shields.io/nuget/v/I18NPortablewithReverseLookup.svg?style=for-the-badge)](https://www.nuget.org/packages/I18NPortablewithReverseLookup/) 
 [![NuGet](https://img.shields.io/nuget/dt/I18NPortablewithReverseLookup.svg?style=for-the-badge)](https://www.nuget.org/packages/I18NPortablewithReverseLookup/) 
 [![AppVeyor](https://img.shields.io/appveyor/ci/xleon/i18n-portable.svg?style=for-the-badge)](https://ci.appveyor.com/project/xleon/i18n-portable) 
-[![Codecov](https://img.shields.io/codecov/c/github/xleon/I18N-Portable.svg?style=for-the-badge)](https://codecov.io/gh/xleon/I18N-Portable)
+[![Codecov](https://img.shields.io/codecov/c/github/xleon/I18NPortablewithReverseLookup.svg?style=for-the-badge)](https://codecov.io/gh/xleon/I18N-Portable)
 
 - Cross platform
 - Simple to use: `"key".Translate()`. or `("Text".ReverseTranslate()).Translate()`.
